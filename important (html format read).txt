@@ -303,11 +303,134 @@ Show different images for different screen sizes:
 
 Note: Always specify an <img> element as the last child element of the <picture> element. The <img> element is used by browsers that do not support the <picture> element, or if none of the <source> tags match.
 
+////////////////////HTML TABLES////////////////
+
+HTML Table Tags
+Tag	Description
+<table>	Defines a table
+<th>	Defines a header cell in a table
+<tr>	Defines a row in a table
+<td>	Defines a cell in a table
+<caption>	Defines a table caption
+<colgroup>	Specifies a group of one or more columns in a table for formatting
+<col>	Specifies column properties for each column within a <colgroup> element
+<thead>	Groups the header content in a table
+<tbody>	Groups the body content in a table
+<tfoot>	Groups the footer content in a table
+
+HTML Table Width
+To set the width of a table, add the style attribute to the <table> element:
+Example
+Set the width of the table to 100%:
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
 
 
+o set the size of a specific column, add the style attribute on a <th> or <td> element:
+
+Example
+Set the width of the first column to 70%:
+<table style="width:100%">
+  <tr>
+    <th style="width:70%">Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+To set the height of a specific row, add the style attribute on a table row element:
+
+Example
+Set the height of the second row to 200 pixels:
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr style="height:200px">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+  
+
+To align the table headers, use the CSS text-align property:
+Example
+th {
+  text-align: left;
+}
+
+<<<<<<<
+You can have a header that spans over two or more columns
+To do this, use the colspan attribute on the <th> element:
+>>>>>>>
+
+<<<<<<<
+HTML Table - Zebra Stripes
+If you add a background color on every other table row, you will get a nice zebra stripes effect.
+To style every other table row element, use the :nth-child(even) selector like this:
+Example
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
 
 
+To make vertical zebra stripes, style every other column, instead of every other row.
+Set the :nth-child(even) for table data elements like this:
+Example
+td:nth-child(even), th:nth-child(even) {
+  background-color: #D6EEEE;
+}
+>>>>>>>>
 
+Horizontal Dividers
+
+If you specify borders only at the bottom of each table row, you will have a table with horizontal dividers.
+
+Add the border-bottom property to all tr elements to get horizontal dividers:
+
+Example
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+Hoverable Table
+
+tr:hover {background-color: #D6EEEE;}
+
+
+<<<<<<<<<HTML colgroup
+The <colgroup> element should be used as a container for the column specifications.
+Each group are specified with a <col> element.
+The span attribute specifies how many columns that gets the style.
+The style attribute specifies the style to give the columns.
+
+There are only a very limited selection of CSS properties that are allowed to be used in the colgroup:
+width property
+visibility property
+background properties
+border properties
+
+You can hide columns with the visibility: collapse property:
+>>>>>>>>>
 
 
 
