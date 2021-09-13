@@ -1,0 +1,336 @@
+<abbr>	Defines an abbreviation or acronym
+<address>	Defines contact information for the author/owner of a document
+<bdo>	Defines the text direction
+<blockquote>	Defines a section that is quoted from another source
+<cite>	Defines the title of a work
+<q>	Defines a short inline quotation
+
+////FOR TEXT STYLE
+
+<b>	Defines bold text
+<em>	Defines emphasized text 
+<i>	Defines a part of text in an alternate voice or mood
+<small>	Defines smaller text
+<strong>	Defines important text
+<sub>	Defines subscripted text
+<sup>	Defines superscripted text
+<ins>	Defines inserted text
+<del>	Defines deleted text
+<mark>	Defines marked/highlighted text
+
+
+/////IN HTML COMMENT is written
+
+<!-- Write your comments here -->
+
+//////FOR adding some property in attribute  such as<>
+
+Use the style attribute for styling HTML elements
+Use background-color for background color
+Use color for text colors
+Use font-family for text fonts
+Use font-size for text sizes
+Use text-align for text alignment
+
+
+///////COLOR in HTML
+
+HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
+
+
+background-color :: name  it will highlight the whole line or page color
+
+color: name ::it will only color the text
+
+style="border:2px solid nameofcolor" it will create a border around the text of 2px. Solid here will define which type of border do you want to use here
+
+Different ways of defining color
+
+RGB::rgb(255, 99, 71)
+HEX::#ff6347
+HSL::hsl(9, 100%, 64%)
+
+example 
+
+<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+An RGB color value represents RED, GREEN, and BLUE light sources.
+An RGBA color value is an extension of RGB with an Alpha channel (opacity).
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+
+A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.
+
+
+hsl(hue, saturation, lightness)
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+Lightness is also a percentage value, 0% is black, and 100% is white.
+
+
+//////////////////////////HTML Styles - CSS///////////////////////////////
+
+Cascading Style Sheets (CSS) is used to format the layout of a webpage.
+With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!
+
+
+CSS can be added to HTML documents in 3 ways:
+Inline - by using the style attribute inside HTML elements
+Internal - by using a <style> element in the <head> section
+External - by using a <link> element to link to an external CSS file
+
+INLINE CSS
+An inline CSS is used to apply a unique style to a single HTML element.
+An inline CSS uses the style attribute of an HTML element.
+The following example sets the text color of the <h1> element to blue, and the text color of the <p> element to red:
+Example
+<h1 style="color:blue;">A Blue Heading</h1>
+<p style="color:red;">A red paragraph.</p>
+
+
+INTERNAL CSS
+An internal CSS is used to define a style for a single HTML page.
+An internal CSS is defined in the <head> section of an HTML page, within a <style> element.
+The following example sets the text color of ALL the <h1> elements (on that page) to blue, and the text color of ALL the <p> elements to red. In addition, the page will be displayed with a "powderblue" background color: 
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+
+External CSS
+An external style sheet is used to define the style for many HTML pages.
+To use an external style sheet, add a link to it in the <head> section of each HTML page:
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+The external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.
+Here is what the "styles.css" file looks like:
+
+"styles.css":
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+
+
+The CSS color property defines the text color to be used.
+The CSS font-family property defines the font to be used.
+The CSS font-size property defines the text size to be used.
+The CSS border property defines a border around an HTML element.
+The CSS padding property defines a padding (space) between the text and the border. you have to use border property for easy understanding
+The CSS margin property defines a margin (space) outside the border. you have to use border property for easy understanding
+
+
+External style sheets can be referenced with a full URL or with a path relative to the current web page.
+Example
+This example uses a full URL to link to a style sheet:
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+
+Use the HTML style attribute for inline styling
+Use the HTML <style> element to define internal CSS
+Use the HTML <link> element to refer to an external CSS file
+Use the HTML <head> element to store <style> and <link> elements
+Use the CSS color property for text colors
+Use the CSS font-family property for text fonts
+Use the CSS font-size property for text sizes
+Use the CSS border property for borders
+Use the CSS padding property for space inside the border
+Use the CSS margin property for space outside the border
+
+
+<style>	Defines style information for an HTML document
+<link>	Defines a link between a document and an external resource
+
+
+//////////HTML LINKS
+
+he HTML <a> tag defines a hyperlink. It has the following syntax:
+<a href="url">link text</a>
+
+To use an image as a link, just put the <img> tag inside the <a> tag:
+Example
+<a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+
+Absolute URLs vs. Relative URLs
+Both examples above are using an absolute URL (a full web address) in the href attribute.
+A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+
+<a>	Defines a hyperlink
+
+//////////////////////HTML IMAGE
+
+Image Size - Width and Height
+You can use the style attribute to specify the width and height of an image.
+
+Example
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+
+Images in Another Folder
+If you have your images in a sub-folder, you must include the folder name in the src attribute:
+Example
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+Image as a Link
+To use an image as a link, put the <img> tag inside the <a> tag:
+Example
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+
+
+Use the HTML <img> element to define an image
+Use the HTML src attribute to define the URL of the image
+Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed
+Use the HTML width and height attributes or the CSS width and height properties to define the size of the image
+Use the CSS float property to let the image float to the left or to the right
+
+
+<img>	Defines an image
+<map>	Defines an image map
+<area>	Defines a clickable area inside an image map
+<picture>	Defines a container for multiple image resources
+
+<<<<<<<<<<<<<<<<<<HTML Image Maps
+
+The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+
+The image is inserted using the <img> tag. The only difference from other images is that you must add a usemap attribute:
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map.
+
+
+
+Then, add a <map> element.
+
+The <map> element is used to create an image map, and is linked to the image by using the required name attribute:
+
+<map name="workmap">
+The name attribute must have the same value as the <img>'s usemap attribute .
+
+The Areas
+Then, add the clickable areas.
+
+A clickable area is defined using an <area> element.
+
+Shape
+You must define the shape of the clickable area, and you can choose one of these values:
+
+rect - defines a rectangular region
+circle - defines a circular region
+poly - defines a polygonal region
+default - defines the entire region
+You must also define some coordinates to be able to place the clickable area onto the image. 
+
+
+<<<<<<<<<<<<<<<<<HTML BACKGROUND IMAGE
+
+To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property:
+Example
+Add a background image on a HTML element:
+<div style="background-image: url('img_girl.jpg');">
+
+
+<<<<<<<<<<<<<<<<<<HTML PICTURE ELEMENT
+
+The HTML <picture> element allows you to display different pictures for different devices or screen sizes.
+
+he HTML <picture> element gives web developers more flexibility in specifying image resources.
+
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+
+Each <source> element has a media attribute that defines when the image is the most suitable.
+
+Example
+Show different images for different screen sizes:
+
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture>
+
+Note: Always specify an <img> element as the last child element of the <picture> element. The <img> element is used by browsers that do not support the <picture> element, or if none of the <source> tags match.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
